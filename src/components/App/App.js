@@ -1,6 +1,6 @@
 import './App.css';
 import movieData from './movieData'
-import Card from './Card'
+import Card from '../Card/Card'
 
 function App() {
   const cards = movieData.movies.map(movie => <Card key={movie.id} movieData={movie}/>)
