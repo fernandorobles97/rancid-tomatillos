@@ -63,6 +63,10 @@
     justify-content: space-between;
 }
 
+#info1 h1 {
+  color: black;
+}
+
 #info1 h1,
 #info2 p,
 #info3 p,
