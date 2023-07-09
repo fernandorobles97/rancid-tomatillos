@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import movieData from './movieData'
-import Movie from './Movie';
+import Movie from '../Movie/Movie';
 import Card from '../Card/Card'
 
 function App() {
