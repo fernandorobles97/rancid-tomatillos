@@ -12,7 +12,7 @@ function App() {
   return (
     <main>
       <h1>All Movies Are Bad</h1>
-      {!isClicked ? cards : <Movie clickedMovie={clickedMovie} isClicked={isClicked} /> }
+      {!isClicked ? cards : <Movie clickedMovie={clickedMovie} setClickedMovie={setClickedMovie} setIsClicked={setIsClicked} /> }
     </main>
   );
 }

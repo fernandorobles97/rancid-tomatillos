@@ -1,0 +1,77 @@
+#individualMovie {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+#individualMovie img {
+    width: 100%;
+    height: 100%;
+}
+
+#individualMovie section {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    border: solid;
+    border-color: black;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+}
+
+.fade-in {
+    animation: fade-in 0.75s ease-in forwards, animate-info-panel .75s ease-in-out forwards;
+}
+
+@keyframes fade-in {
+    0% {
+      visibility: hidden;
+      opacity: 0;
+    }
+    30% {
+      visibility: hidden;
+      opacity: 0;
+    }
+    60% {
+      visibility: visible;
+      opacity: 1;
+    }
+    100% {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  @keyframes animate-info-panel {
+    0% {
+      height: 0%;
+    }
+    100% {
+      height: 60%
+    }
+  }
+
+.info {
+    display: flex;
+    width: 100%;
+}
+
+#info1 {
+    justify-content: space-between;
+}
+
+#info1 h1,
+#info2 p,
+#info3 p,
+#info4 div,
+#info5 h2 {
+    margin-left: 10vw;
+}
+
+#info1 button {
+    align-self: center;
+    margin-right: 10vw;
+}
