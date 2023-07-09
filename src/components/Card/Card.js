@@ -7,8 +7,6 @@ const Card = (props) => {
     }
 
     return (
-        // on click need to conditionally render either dash or individual view
-        // need a variable for state on whether if movie is clicked or not
         <div className='individual-card' onClick={() => handleClick()}>
             <img src={props.movieData.poster_path} alt={`poster for ${props.movieData.title}`} />
             <div className='card-information' >

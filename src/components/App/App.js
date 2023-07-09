@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import movieData from './movieData'
-import Movie from '../../Movie';
+import Movie from '../Movie/Movie';
 import Card from '../Card/Card'
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
       <header>
         <h1>All Movies Are Bad</h1>
       </header>
-      {!isClicked ? cards : <Movie clickedMovie={clickedMovie} isClicked={isClicked} /> }
+      {!isClicked ? cards : <Movie clickedMovie={clickedMovie} setClickedMovie={setClickedMovie} setIsClicked={setIsClicked} /> }
     </main>
   );
 }
