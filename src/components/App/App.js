@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './App.css';
 import movieData from './movieData'
-import Card from './Card'
 import Movie from './Movie';
+import Card from '../Card/Card'
 
 function App() {
   const [isClicked, setIsClicked] = useState(false)
