@@ -11,7 +11,9 @@ function App() {
 
   return (
     <main>
-      <h1>All Movies Are Bad</h1>
+      <header>
+        <h1>All Movies Are Bad</h1>
+      </header>
       {!isClicked ? cards : <Movie clickedMovie={clickedMovie} isClicked={isClicked} /> }
     </main>
   );
