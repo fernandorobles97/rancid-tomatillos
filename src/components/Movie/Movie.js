@@ -2,7 +2,6 @@ import React from "react";
 import './Movie.css';
 
 const Movie = (props) => {
-  console.log(props)
   const handleClick = () => {
     props.setIsClicked(false);
     props.setClickedMovie({})

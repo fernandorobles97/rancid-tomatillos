@@ -8,12 +8,19 @@ function App() {
   const [isClicked, setIsClicked] = useState(false)
   const [clickedMovie, setClickedMovie] = useState({})
   const [movieData, setMovieData] = useState([])
+  const [goodRequest, setGoodRequest] = useState(true)
 
   const cards = movieData.map(movie => <Card setClickedMovie={setClickedMovie} setIsClicked={setIsClicked} key={movie.id} movieData={movie}/>)
 
   useEffect(() => {
     fetch("https://rancid-tomatillos.herokuapp.com/api/v2/movies")
-      .then(res => res.json())
+      .then(response => {
+        if (response.status === 500) {
+          setGoodRequest(false)
+        } else {
+          return response.json()
+        }
+      })
       .then(data => setMovieData(data.movies))
       .catch(err => console.log(err))
   }, [])
@@ -23,6 +30,7 @@ function App() {
       <header>
         <h1>All Movies Are Bad</h1>
       </header>
+      {!goodRequest && <h2>Sorry, something went wrong.</h2> }
       {!isClicked ? cards : <Movie clickedMovie={clickedMovie} setClickedMovie={setClickedMovie} setIsClicked={setIsClicked} /> }
     </main>
   );

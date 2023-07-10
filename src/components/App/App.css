@@ -19,7 +19,7 @@ h1 {
   font-size: 3em;
   color: white;
   margin-left: 6vw;
-  width: 55vw;
+  /* width: 55vw; */
   display: flex;
 }
 
