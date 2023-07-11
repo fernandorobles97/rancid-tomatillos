@@ -21,7 +21,7 @@ function App() {
         }
       })
       .then(data => setMovieData(data.movies))
-      .catch(err => console.log(err))
+      .catch(err => alert(err))
   }, [])
 
   return (
