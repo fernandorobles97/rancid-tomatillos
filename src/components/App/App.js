@@ -5,12 +5,10 @@ import Movie from '../Movie/Movie'
 import Card from '../Card/Card'
 
 function App() {
-  const [isClicked, setIsClicked] = useState(false)
-  const [clickedMovie, setClickedMovie] = useState({})
   const [movieData, setMovieData] = useState([])
   const [goodRequest, setGoodRequest] = useState(true)
 
-  const cards = movieData.map(movie => <Card setClickedMovie={setClickedMovie} setIsClicked={setIsClicked} key={movie.id} movieData={movie}/>)
+  const cards = movieData.map(movie => <Card key={movie.id} movieData={movie}/>)
 
   useEffect(() => {
     fetch("https://rancid-tomatillos.herokuapp.com/api/v2/movies")
@@ -32,7 +30,7 @@ function App() {
       </header>
       <Routes>
         <Route path='/' element={!goodRequest ? <h2>Sorry, something went wrong.</h2> : cards}/>
-        <Route path=':id' element={<Movie clickedMovie={clickedMovie} setClickedMovie={setClickedMovie}/>}/>
+        <Route path=':id' element={<Movie />}/>
       </Routes>
     </main>
   );
