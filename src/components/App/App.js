@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Routes, Route } from 'react-router-dom'
 import './App.css'
 import Movie from '../Movie/Movie'
 import Card from '../Card/Card'
@@ -29,8 +30,10 @@ function App() {
       <header>
         <h1>All Movies Are Bad</h1>
       </header>
-      {!goodRequest && <h2>Sorry, something went wrong.</h2>}
-      {!isClicked ? cards : <Movie clickedMovie={clickedMovie} setClickedMovie={setClickedMovie} setIsClicked={setIsClicked} />}
+      <Routes>
+        <Route path='/' element={!goodRequest ? <h2>Sorry, something went wrong.</h2> : cards}/>
+        <Route path=':id' element={<Movie clickedMovie={clickedMovie} setClickedMovie={setClickedMovie}/>}/>
+      </Routes>
     </main>
   );
 }

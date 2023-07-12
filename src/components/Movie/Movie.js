@@ -1,11 +1,9 @@
 import React from "react";
+import { useParams, Link } from "react-router-dom"
 import './Movie.css';
 
 const Movie = (props) => {
-  const handleClick = () => {
-    props.setIsClicked(false);
-    props.setClickedMovie({})
-  }
+  console.log(useParams())
   
   return (
     <main id="individualMovie">
@@ -13,7 +11,9 @@ const Movie = (props) => {
         <section className="fade-in">
           <div className="info" id="info1">
             <h1>{props.clickedMovie.title}</h1>
-            <button onClick={handleClick}>back to home</button>
+            <Link to="/">
+              <button>back to home</button>
+            </Link>
           </div>
           <div className="info" id="info2"><p>{props.clickedMovie.genres}</p></div>
           <div className="info" id="info3">
