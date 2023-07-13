@@ -8,7 +8,7 @@ function App() {
   const [movieData, setMovieData] = useState([])
   const [goodRequest, setGoodRequest] = useState(true)
 
-  const cards = movieData.map(movie => <Card key={movie.id} movieData={movie}/>)
+  const cards = movieData.map(movie => <Card key={movie.id} id={movie.id} title={movie.title} poster_path={movie.poster_path} average_rating={movie.average_rating} release_date={movie.release_date} />)
 
   useEffect(() => {
     fetch("https://rancid-tomatillos.herokuapp.com/api/v2/movies")

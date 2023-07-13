@@ -1,16 +1,17 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
-const Card = (props) => {
+const Card = ({ id, poster_path, title, average_rating, release_date  }) => {
     return (
-        <Link to={`${props.movieData.id}`}>
+        <Link to={`${id}`}>
             <div className='individual-card'>
-                <img src={props.movieData.poster_path} alt={`poster for ${props.movieData.title}`} />
+                <img src={ poster_path } alt={`poster for ${title}`} />
                 <div className='card-information' >
-                    <h2>{props.movieData.title}</h2>
+                    <h2>{ title }</h2>
                     <div className='rating-release'>
-                        <p>Rating: {props.movieData.average_rating}</p>
-                        <p>Release Date: {props.movieData.release_date}</p>
+                        <p>Rating: {average_rating}</p>
+                        <p>Release Date: {release_date}</p>
                     </div>
                 </div>
             </div>
@@ -20,4 +21,12 @@ const Card = (props) => {
 
 
 
-export default Card
+export default Card;
+
+Card.propTypes = {
+    id: PropTypes.number.isRequired,
+    poster_path: PropTypes.string,
+    title: PropTypes.string,
+    average_rating: PropTypes.number,
+    release_date: PropTypes.string
+}
