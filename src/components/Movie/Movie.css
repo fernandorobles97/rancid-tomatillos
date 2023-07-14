@@ -12,8 +12,7 @@
 #individualMovie section {
     position: absolute;
     bottom: 0;
-    display: flex;
-    flex-direction: column;
+    display: grid;
     width: 100%;
     background-color: white;
     border: solid;
@@ -70,12 +69,39 @@
 #info1 h1,
 #info2 p,
 #info3 p,
-#info4 div,
 #info5 h2 {
-    margin-left: 10vw;
+  margin: 0 2vw 0 10vw;
+  align-items: center;
 }
 
 #info1 a {
     align-self: center;
     margin-right: 10vw;
+}
+
+#individualMovie p {
+  font-size: 11px;
+}
+
+#info4 div,
+#info4 p {
+  display: flex;
+  align-items: center;
+  margin: 0 2vw 0 2vw
+}
+
+#info4 {
+  width: 90%;
+  background-color: #e1dddd;
+  border-radius: 25px;
+  justify-self: center;
+}
+
+#info5 {
+  display: flex;
+  flex-direction: column;
+}
+
+#info5 div {
+  align-self: center;
 }
