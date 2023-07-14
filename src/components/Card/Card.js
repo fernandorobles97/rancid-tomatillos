@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
-const Card = ({ id, poster_path, title, average_rating, release_date  }) => {
+const Card = ({ id, poster_path, title, average_rating, release_date }) => {
     return (
         <Link to={`${id}`}>
             <div className='individual-card'>
@@ -18,8 +18,6 @@ const Card = ({ id, poster_path, title, average_rating, release_date  }) => {
         </Link>
     )
 }
-
-
 
 export default Card;
 
