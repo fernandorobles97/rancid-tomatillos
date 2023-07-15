@@ -30,7 +30,7 @@ function App() {
       </header>
       <Routes>
         <Route path='/' element={!goodRequest ? <h2>Sorry, something went wrong.</h2> : cards}/>
-        <Route path=':id' element={<Movie />}/>
+          <Route path=':id' element={<Movie />}/>
       </Routes>
     </main>
   );

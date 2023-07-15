@@ -16,7 +16,8 @@ const Movie = () => {
   if (clickedMovie) {
     return (
       <main id="individualMovie">
-        <img src={clickedMovie.movie.poster_path} alt={`poster for ${clickedMovie.movie.title}`} />
+        <img src={clickedMovie.movie.backdrop_path} id="background" alt={`background for ${clickedMovie.movie.title}`}/>
+        <img src={clickedMovie.movie.poster_path} id="cover" alt={`poster for ${clickedMovie.movie.title}`} />
         <section className="fade-in">
           <div className="info" id="info1">
             <h1>{clickedMovie.movie.title}</h1>
@@ -24,19 +25,21 @@ const Movie = () => {
               <button>back to home</button>
             </Link>
           </div>
-          <div className="info" id="info2"><p>{clickedMovie.movie.genres.join(' ')}</p></div>
+          <div className="info" id="info2"><p>{clickedMovie.movie.genres.join(' / ')}</p></div>
           <div className="info" id="info3">
             <p>Runtime: {clickedMovie.movie.runtime}</p>
             <p>Release date: {clickedMovie.movie.release_date}</p>
           </div>
           <div className="info" id="info4">
-            <div>Rating: {clickedMovie.movie.average_rating} / 10</div>
+            <div className="nowrap">Rating: {clickedMovie.movie.average_rating} / 10</div>
             <p>{clickedMovie.movie.overview}</p>
           </div>
           <div className="info" id="info5">
             <h2>Other details</h2>
-            <p>Budget: ${clickedMovie.movie.budget}</p>
-            <p>Revenue: ${clickedMovie.movie.revenue}</p>
+            <div>
+              <p>Budget: ${clickedMovie.movie.budget}</p>
+              <p>Revenue: ${clickedMovie.movie.revenue}</p>
+            </div>
           </div>
         </section> 
       </main>
