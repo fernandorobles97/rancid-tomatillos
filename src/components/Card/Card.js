@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const Card = ({ id, poster_path, title, average_rating, release_date }) => {
     return (
-        <Link to={`${id}`}>
+        <Link to={`${id}`} className='link'>
             <div className='individual-card'>
                 <img src={ poster_path } alt={`poster for ${title}`} />
                 <div className='card-information' >
