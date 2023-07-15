@@ -15,7 +15,7 @@ describe('Movie View user flows', () => {
     cy.get('h2').contains('Black Adam').click()
     .url().should('include', '/436270')
     .get('#info1').contains('Black Adam')
-    .get('#info2').contains('Action Fantasy Science Fiction')
+    .get('#info2').contains('Action / Fantasy / Science Fiction')
     .get('#info3').contains('2022-10-19')
     .get('#info3').contains('125')
     .get('[alt="poster for Black Adam"]').should('be.visible')
