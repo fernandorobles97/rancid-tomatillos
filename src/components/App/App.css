@@ -1,5 +1,12 @@
 html {
   font-size: 62.5%;
+  height: 100%;
+}
+
+#root,
+body,
+main {
+  height: 100%;
 }
 
 body {

@@ -7,12 +7,14 @@
 #individualMovie img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
 #individualMovie section {
     position: absolute;
     bottom: 0;
     display: grid;
+    grid-auto-rows: min-content;
     width: 100%;
     background-color: white;
     border: solid;
@@ -56,6 +58,7 @@
 .info {
     display: flex;
     width: 100%;
+    margin-bottom: 10px;
 }
 
 #info1 {
@@ -105,3 +108,10 @@
 #info5 div {
   align-self: center;
 }
+
+/* desktop */
+/* @media screen and (min-width: 800px) {
+  h1 {
+    color: blue;
+  }
+} */
