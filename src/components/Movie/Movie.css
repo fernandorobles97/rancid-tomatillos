@@ -136,6 +136,8 @@
     bottom: 0;
     left: 0;
     right: 0;
+    height: 110%;
+    width: 100%;
     object-fit: cover;
     animation: background-fade 0.75s ease-in forwards
   }
@@ -164,6 +166,25 @@
     margin: 5%;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
+  }
+
+  @keyframes fade-in {
+    0% {
+      visibility: hidden;
+      opacity: 0;
+    }
+    30% {
+      visibility: hidden;
+      opacity: 0;
+    }
+    60% {
+      visibility: visible;
+      opacity: 1;
+    }
+    100% {
+      visibility: visible;
+      opacity: .9;
+    }
   }
 
   @keyframes animate-info-panel {
