@@ -4,13 +4,20 @@ import './Movie.css';
 
 const Movie = () => {
   const [clickedMovie, setClickedMovie] = useState()
+  const [requestFailed, setRequestFailed] = useState()
   const movieID = useParams().id
 
   useEffect(() => {
     fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${movieID}`)
-      .then(response => response.json())
+      .then(response => {
+        if(!response.ok) {
+          setRequestFailed(true)
+          throw new Error(response.status)
+        }
+        else return response.json()
+      })
       .then(data => setClickedMovie(data))
-      .catch(err => alert(err))
+      .catch(err => console.log(err))
   }, [])
 
   if (clickedMovie) {
@@ -44,8 +51,11 @@ const Movie = () => {
         </section> 
       </main>
     )
+  } else if (requestFailed) {
+    return (
+      <h2 style={{color: "black"}}>This movie doesn't exist, please return home and try again</h2>
+    )
   }
 }
   
-
 export default Movie
