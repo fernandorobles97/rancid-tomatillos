@@ -26,7 +26,6 @@ h1 {
   font-size: 3em;
   color: white;
   margin-left: 6vw;
-  /* width: 55vw; */
   display: flex;
 }
 
@@ -39,11 +38,16 @@ h1 {
   border-bottom: 3px solid rgb(214, 214, 214);
 }
 
+.link {
+  color: inherit;
+  text-decoration: inherit;
+}
+
 .card-information {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 30vw;
+  width: 40vw;
 }
 
 h2 {
@@ -52,6 +56,8 @@ h2 {
 
 .rating-release {
   display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   color: rgb(137, 136, 136); 
   font-size: 1em;
 }
@@ -61,8 +67,15 @@ img {
   height: auto;
 }
 
-@media (min-width: 900px) {
+@media screen and (min-width: 650px) {
   h1 {
-    color: aqua;
+    font-size: 4em;
+  }
+  h2 {
+    font-size: 3em;
+  }
+  .rating-release {
+    flex-direction: row;
+    font-size: 1.5em;
   }
 }
