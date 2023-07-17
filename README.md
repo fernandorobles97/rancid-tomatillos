@@ -16,7 +16,7 @@ Cypress
 </div>
 
 ## Abstract: 
-Have you ever wanted learn more about your least favorite movies? This is the movie app for that!
+Have you ever wanted to learn more about your least favorite movies? This is the movie app for that!
 ### User Stories: 
 - Can view the main dashboard with a list of all movies
 - Can click on a movie on the dashboard, which will take you to that movie's individual extended details page
@@ -29,9 +29,10 @@ Have you ever wanted learn more about your least favorite movies? This is the mo
 - Testing was implemented with Cypress
 
 ## Preview of Mobile View:
+![](https://im4.ezgif.com/tmp/ezgif-4-32e102ae13.gif)
 
 ### Desktop Display: 
-
+![](https://im4.ezgif.com/tmp/ezgif-4-5b5baa0af2.gif)
 
 ## Installation Instructions 
 ### Client App Setup
